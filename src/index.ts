@@ -33,3 +33,16 @@ myPromise4.catch((err) => {
   console.log(err); // log: 'Error: Operation Failed'
 });
 //------------------------------------- Ejercicio 5 --------------------------------------------------------//
+const callback1 = (value) => console.log("Esto es un texto:", value);
+const callback2 = (value) => console.log("Esto es un numero:", value);
+
+const myPromise5: Promise<number> = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve(2);
+  }, 1000);
+});
+
+myPromise5.then((value) => {
+  callback2(2);
+  console.log("1");
+}); // log: Esto es un numero: 2
