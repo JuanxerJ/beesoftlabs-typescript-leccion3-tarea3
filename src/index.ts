@@ -1,11 +1,17 @@
 //------------------------------------- Ejercicio 1 --------------------------------------------------------//
 
-const myPromise = Promise.resolve(1);
+const myPromise: Promise<number> = Promise.resolve(1);
 myPromise.then((value) => {
   console.log(value);
 });
 //------------------------------------- Ejercicio 2 --------------------------------------------------------//
+const myPromise2: Promise<number> = new Promise((resolve) => {
+  resolve(1);
+});
 
+myPromise2.then((value: number) => {
+  console.log(value + 1);
+});
 //------------------------------------- Ejercicio 3 --------------------------------------------------------//
 
 //------------------------------------- Ejercicio 4 --------------------------------------------------------//
