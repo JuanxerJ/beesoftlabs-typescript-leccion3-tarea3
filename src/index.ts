@@ -25,5 +25,11 @@ myPromise3
     console.log(value + 1); // log: 4
   });
 //------------------------------------- Ejercicio 4 --------------------------------------------------------//
+const myPromise4: Promise<string> = new Promise((resolve, reject) => {
+  reject("Error: Operation Failed");
+});
 
+myPromise4.catch((err) => {
+  console.log(err); // log: 'Error: Operation Failed'
+});
 //------------------------------------- Ejercicio 5 --------------------------------------------------------//
